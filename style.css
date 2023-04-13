@@ -1,16 +1,19 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 320px;
+    width: 480px;
     margin: auto;
-    background-color: aquamarine;
     border: 2px solid black;
 }
 
 .pixel {
     box-sizing: border-box;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     border: 1px solid grey;
     background-color: white;
+}
+
+.colored {
+    background-color: black;
 }
