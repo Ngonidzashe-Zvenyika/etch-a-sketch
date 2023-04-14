@@ -1,9 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto", "sans-serif";
+}
+
+header {
+    margin: 30px 0px 30px 0px;
+    text-align: center;
+    font-family: "Luckiest Guy", "cursive";
+    font-size: 30px;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
     width: 480px;
-    margin: auto;
     border: 2px solid black;
+}
+
+.gridSizeButton {
+    margin-top: 30px;
+}
+
+.options {
+    display: flex;
+    justify-content:  space-evenly;
+    width: 480px;
+    margin-top: 30px;
+}
+
+.mode {
+    padding: 1px;
 }
 
 .pixel {
@@ -14,6 +42,6 @@
     background-color: white;
 }
 
-.colored {
+.black {
     background-color: black;
 }
