@@ -31,7 +31,7 @@ function blackBrush() {
     const squares = document.querySelectorAll(".square");
     for (const square of squares) {
         square.addEventListener("mouseover", ()=> {
-            square.style.backgroundColor = "black";
+            square.style.backgroundColor = `rgb(0, 0, 0)`;
         });
     }
 }
@@ -44,10 +44,11 @@ function rainbowBrush() {
             let x = Math.random() * 256;
             let y = Math.random() * 256;
             let z = Math.random() * 256;
-            square.style.backgroundColor = `rgb(${x},${y},${z})`;
+            square.style.backgroundColor = `rgb(${x}, ${y}, ${z})`;
         });
     }
 }
+
 
 // This function changes the brush color to white in order to "erase" individual squares;
 function eraseColor() {
@@ -69,10 +70,10 @@ function clearGrid() {
 
 // This function requests and validates an input for the grid size, invalid entries prevent the body from executing.
 function enterGridSize() {
-    let input = parseInt(prompt("How many pixels per side? (Maximum: 64)"));
+    let input = parseInt(prompt("How many squares per side? (Maximum: 64)"));
     while ((input < 1) || (input > 64)) { 
     alert("That's not right, try again.");
-    input = parseInt(prompt("How many pixels per side? (Maximum: 64)"));
+    input = parseInt(prompt("How many squaress per side? (Maximum: 64)"));
     } 
     if (isNaN(input)) return;
     const mode = document.querySelector(".mode");
