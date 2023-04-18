@@ -1,9 +1,9 @@
 // These are the initialized global variables;
 const gridSize = 640;
-const grid = document.querySelector(".grid");
-const buttons = document.querySelectorAll("button");
 let squaresPerSide = 20;
 let numberSquares = squaresPerSide*squaresPerSide;
+const grid = document.querySelector(".grid");
+const buttons = document.querySelectorAll("button");
 
 
 // This function addes squares to the main div;
@@ -49,13 +49,12 @@ function rainbowBrush() {
     }
 }
 
-
 // This function changes the brush color to white in order to "erase" individual squares;
 function eraseColor() {
     const squares = document.querySelectorAll(".square");
     for (const square of squares) {
         square.addEventListener("mouseover", ()=> {
-            square.style.backgroundColor = "white";
+            square.style.backgroundColor = `rgb(255, 255, 255)`;
         });
     }
 }
@@ -64,18 +63,25 @@ function eraseColor() {
 function clearGrid() {
     const squares = document.querySelectorAll(".square");
     for (const square of squares) {
-        square.style.backgroundColor = "white";
+        square.style.backgroundColor = `rgb(255, 255, 255)`;
     }
 }
 
 // This function requests and validates an input for the grid size, invalid entries prevent the body from executing.
 function enterGridSize() {
-    let input = parseInt(prompt("How many squares per side? (Maximum: 64)"));
-    while ((input < 1) || (input > 64)) { 
-    alert("That's not right, try again.");
-    input = parseInt(prompt("How many squaress per side? (Maximum: 64)"));
-    } 
-    if (isNaN(input)) return;
+    let valid = false;
+    let input = prompt("How many squares per side? (Maximum: 64)");
+    while (valid === false) {
+        if (input === null) {
+            return;
+        } else if ((isNaN(Number(input))) || (Number(input) < 1) || (Number(input) > 64)) {
+            alert("Enter a valid number.");
+            input = prompt("How many squares per side? (Min = 1, Max = 64)");
+        } else {
+            valid = true;
+        }
+    }
+     
     const mode = document.querySelector(".mode");
     mode.innerText = `Mode: ${input} x ${input}`;
     squaresPerSide = input;

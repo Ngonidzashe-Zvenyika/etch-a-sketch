@@ -13,7 +13,7 @@ header {
     margin: 30px 0px 30px 0px;
     background-color: white;
     border: 2px solid red;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .grid {
@@ -21,6 +21,7 @@ header {
     flex-wrap: wrap;
     width: 640px;
     border: 2px solid red;
+    background-color: white;
 }
 
 .gridSizeButton {
@@ -44,6 +45,6 @@ header {
 .square {
     box-sizing: border-box;
     border: 1px solid grey;
-    background-color: white;
+    background-color: white;;
 }
 
