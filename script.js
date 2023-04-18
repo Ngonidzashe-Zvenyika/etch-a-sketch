@@ -1,5 +1,5 @@
 // These are the initialized global variables;
-const gridSize = 640;
+const gridSize = 480;
 let squaresPerSide = 20;
 let numberSquares = squaresPerSide*squaresPerSide;
 const grid = document.querySelector(".grid");
@@ -82,8 +82,8 @@ function enterGridSize() {
         }
     }
      
-    const mode = document.querySelector(".mode");
-    mode.innerText = `Mode: ${input} x ${input}`;
+    const mode = document.querySelector(".size");
+    mode.innerText = `${input} x ${input}`;
     squaresPerSide = input;
     numberSquares = squaresPerSide*squaresPerSide;
     removeGrid();

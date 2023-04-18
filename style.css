@@ -1,16 +1,38 @@
 body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     font-family: "Arial", "sans-serif";
     background-color: black;
 }
 
-header {
+.options {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content:  space-evenly;
+    box-sizing: border-box;
+    padding: 0px 10px 0px 10px;
+    margin: 120px 30px 0px 0px;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.gridSizeButton {
+    padding: 5px 20px;
+}
+
+.size {
+    text-align: center;
+}
+
+.gameTitle {
     font-size: 30px;
     font-weight: bold;
-    padding: 10px;
-    margin: 30px 0px 30px 0px;
+    text-align: center;
+    padding: 10px 0px;
+    margin-bottom: 30px;
     background-color: white;
     border: 2px solid red;
     border-radius: 5px;
@@ -19,28 +41,11 @@ header {
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 640px;
+    width: 480px;
     border: 2px solid red;
     background-color: white;
 }
 
-.gridSizeButton {
-    padding: 5px 20px 5px 20px;
-    margin-top: 30px;
-}
-
-.options {
-    display: flex;
-    align-items: center;
-    justify-content:  space-evenly;
-    box-sizing: border-box;
-    width: 640px;
-    padding: 10px;
-    margin-top: 30px;
-    background-color: white;
-    border: 2px solid red;
-    border-radius: 5px;
-}
 
 .square {
     box-sizing: border-box;
