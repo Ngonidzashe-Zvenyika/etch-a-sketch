@@ -1,5 +1,5 @@
 // These are the initialized global variables;
-const gridSize = 480;
+const gridSize = 640;
 let squaresPerSide = 20;
 let numberSquares = squaresPerSide*squaresPerSide;
 const grid = document.querySelector(".grid");
