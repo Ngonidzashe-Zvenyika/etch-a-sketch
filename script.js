@@ -9,8 +9,9 @@ let numberSquares = squaresPerSide*squaresPerSide;
 const grid = document.querySelector(".grid");
 const buttons = document.querySelectorAll("button");
 
-// This function detects which button has been pressed and effects changes to suit the button's purpose;
+// This function creates the initial grid, detects which button has been pressed and effects changes to suit the button's purpose;
 function buttonChoice() {
+    createNewGrid();
     for (const button of buttons) {
         button.addEventListener("click", ()=> {
             switch (true) {
@@ -131,5 +132,4 @@ function eraseColor(square) {
 }
 
 // Main program;
-createNewGrid();
 buttonChoice();
