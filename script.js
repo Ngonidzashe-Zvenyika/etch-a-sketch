@@ -74,7 +74,7 @@ function removeGrid() {
     }
 }
 
-// This function addes squares to the main div and calls brushChoice();
+// This function adds squares to the main div and calls brushChoice();
 function createNewGrid() {
     for (i = 1; i <= numberSquares; ++i) {
         const createSquare = document.createElement("div");
